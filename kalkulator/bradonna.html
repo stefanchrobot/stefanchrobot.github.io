@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Kalkulator rozmiarów</title>
+</head>
+<body>
+  <script>
+    var obwody = ['60', '65', '70', '75', '80', '85', '90', '95', '100', '105', '110', '115', '120'];
+    var miseczkiEU = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P'];
+    var miseczkiUK = ['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'GG', 'H', 'HH', 'J', 'JJ', 'K', 'KK'];
+
+    function krWyliczRozmiary(obwodPodBiustem, obwodWBiuscie) {
+      if (obwodPodBiustem < 58 || obwodPodBiustem >= 123) { return null; }
+      var obwod = Math.floor((obwodPodBiustem + 2 - 60) / 5);
+      console.log('obwod: ' + obwod);
+      var obwodWBiuscieNorm = obwodWBiuscie - 5 * obwod;
+      if (obwodWBiuscieNorm < 71.5 || obwodWBiuscieNorm >= 112) { return null; }
+      var miseczka = Math.floor((obwodWBiuscieNorm - 71.5) / 2.5);
+      console.log('miseczka: ' + miseczka);
+
+      return {
+        eu: obwody[obwod] + miseczkiEU[miseczka],
+        uk: obwody[obwod] + miseczkiUK[miseczka]
+      };
+    }
+
+    function krWylicz() {
+      var rozmiary = krWyliczRozmiary(
+        parseFloat(document.getElementById('kr-obwod-pod-biustem').value) || 0,
+        parseFloat(document.getElementById('kr-obwod-w-biuscie').value) || 0
+      );
+
+      if (rozmiary) {
+        document.getElementById('kr-wynik-rozmiar-eu').innerHTML = rozmiary.eu;
+        document.getElementById('kr-wynik-rozmiar-uk').innerHTML = rozmiary.uk;
+        document.getElementById('kr-wynik-rozmiar').style = 'display: block;';
+        document.getElementById('kr-wynik-brak').style = 'display: none;';
+      } else {
+        document.getElementById('kr-wynik-rozmiar').style = 'display: none;';
+        document.getElementById('kr-wynik-brak').style = 'display: block;';
+      }
+    }
+  </script>
+
+  <style>
+    .kr-container {
+      background: url('kr-bg.jpg') no-repeat;
+      width: 800px;
+      height: 566px;
+      box-sizing: border-box;
+      font-family: Helvetica;
+      display: flex;
+    }
+
+    .kr-lewy, .kr-prawy {
+      flex: 1 1 50%;
+      box-sizing: border-box;
+      margin: 30px 40px;
+      padding: 20px;
+    }
+
+    .kr-lewy {
+      background: #e49894;
+    }
+
+    .kr-tytul {
+      display: block;
+      margin: auto;
+    }
+
+    .kr-lewy label, .kr-lewy h2 {
+      display: block;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .kr-lewy label {
+      color: black;
+      margin-top: 14px;
+    }
+
+    .kr-lewy input, .kr-wynik {
+      background: #e49894;
+      border: 2px solid white;
+      height: 48px;
+      display: block;
+      margin: auto;
+      text-align: center;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .kr-lewy input {
+      width: 190px;
+    }
+
+    .kr-lewy input:focus {
+      outline: none;
+    }
+
+    .kr-lewy h2 {
+      color: white;
+    }
+
+    #kr-wynik-rozmiar {
+      margin: auto;
+    }
+
+    h2.kr-twoj-rozmiar {
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+
+    .kr-wynik-rozmiary {
+      display: flex;
+      justify-content: center;
+    }
+
+    .kr-wynik {
+      width: 90px;
+      margin: 0 5px;
+      line-height: 48px;
+    }
+
+    .kr-prawy {
+      padding-top: 0;
+    }
+
+    .kr-wylicz {
+      display: block;
+      margin: auto;
+      filter: drop-shadow(2px 2px 4px #555555);
+    }
+
+    #kr-wynik-brak {
+      margin: 40px 20px 0 20px;
+      color: white;
+      font-size: 16px;
+    }
+  </style>
+
+  <div class="kr-container">
+    <div class="kr-lewy">
+      <img src="kr-tytul.png" class="kr-tytul">
+      <label for="kr-obwod-pod-biustem">Obwód pod biustem cm</label>
+      <input type="text" id="kr-obwod-pod-biustem">
+      <label for="kr-obwod-w-biuscie">Obwód w biuście cm</label>
+      <input type="text" id="kr-obwod-w-biuscie">
+      <div id="kr-wynik-rozmiar">
+        <h2 class="kr-twoj-rozmiar">Twój rozmiar</h2>
+        <div class="kr-wynik-rozmiary">
+          <div>
+            <h2>EU</h2>
+            <div id="kr-wynik-rozmiar-eu" class="kr-wynik"></div>
+          </div>
+          <div>
+            <h2>UK</h2>
+            <div id="kr-wynik-rozmiar-uk" class="kr-wynik"></div>
+          </div>
+        </div>
+      </div>
+      <div id="kr-wynik-brak" style="display: none;">
+        Prawdopodobnie nie mamy biustonosza w Twoim rozmiarze. Skontaktuj się znami, postaramy się pomóc :)
+      </div>
+    </div>
+    <div class="kr-prawy">
+      <img onclick="krWylicz()" class="kr-wylicz" src="kr-wylicz.png">
+    </div>
+  </div>
+</body>
+</html>
