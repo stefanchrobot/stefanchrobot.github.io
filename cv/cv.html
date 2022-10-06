@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles.css">
+    <title>Stefan Chrobot - CV</title>
+    <style>
+      /* Inspired by https://github.com/delight-im/HTML-Sheets-of-Paper */
+
+      .page {
+        /* A4 */
+        width: 21cm;
+        height: 29.7cm;
+      }
+
+      @media screen {
+        body {
+          background-color: #edf2f7;
+        }
+
+        .page {
+          margin: 1cm auto;
+          /* shadow-md */
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+      }
+
+      @page {
+        size: A4 portrait;
+        /* Force the browser to hide the header and footer. */
+        margin: 0;
+        orphans: 4;
+        widows: 2;
+      }
+
+      @media print {
+        body {
+          background-color: white;
+        }
+
+        .page {
+          margin: 0;
+          page-break-after: always;
+        }
+      }
+
+      ul {
+        list-style-type: circle !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- CV -->
+    <div class="page bg-white flex flex-row text-gray-900">
+      <!-- Left side -->
+      <div style="width: 8.021cm" class="flex-none bg-gray-100 border-r-2 p-6">
+        <img src="img/photo.jpg" class="mx-auto mt-6 rounded-full border-2 border-gray-600">
+
+        <!-- Profile -->
+        <div class="text-center font-thin uppercase mt-8">
+          <div class="bg-gray-100 inline px-4 text-black">
+            Profile
+          </div>
+          <hr class="border-t-2 -mt-3">
+        </div>
+
+        <!-- About me -->
+        <div class="mt-6 text-sm text-justifyx">
+          I'm all about solving problems with software.
+          I'm excited about great products and technologies.<br>
+          <br>
+          I find fulfillment in delivering software that people find useful and cool.<br>
+          <br>
+          I strive for simplicity and worry-free weekends. After hours I'm a husband and a dad;&nbsp;
+          also a wannabe guitar player. In spare time I&nbsp;tinker with even more code.
+        </div>
+
+        <!-- Contact -->
+        <div class="mt-6 text-sm">
+          <div class="flex flex-row mt-2">
+            <div class="ml-4 w-8 text-gray-700">
+              <svg class="-ml-0.5 mr-2 h-5 w-4" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+              </svg>
+            </div>
+            <div class="font-boldx">
+              stefan@chrobot.io
+            </div>
+          </div>
+          <div class="flex flex-row mt-2">
+            <div class="ml-4 w-8 text-gray-700">
+              <svg class="-ml-0.5 mr-2 h-5 w-4" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+              </svg>
+            </div>
+            <div class="font-boldx">
+              Kraków, Poland (UTC+2)
+            </div>
+          </div>
+          <div class="flex flex-row mt-2">
+            <div class="ml-4 w-8 text-gray-700">
+              <svg class="-ml-0.5 mr-2 h-5 w-4" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+            </div>
+            <div class="font-boldx">
+              +48 504 582 957
+            </div>
+          </div>
+          <div class="flex flex-row mt-2">
+            <div class="ml-4 w-8 text-gray-700">
+              <svg class="-ml-0.5 mr-2 h-5 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+              </svg>
+            </div>
+            <div class="font-boldx">stefanchrobot</div>
+          </div>
+          <div class="flex flex-row mt-2">
+            <div class="ml-4 w-8 text-gray-700">
+              <svg class="-ml-0.5 mr-2 h-5 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </div>
+            <div class="font-boldx">
+              @StefanChrobot
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="text-center font-thin uppercase mt-8">
+          <div class="bg-gray-100 inline px-4 text-black">
+            Skill Cloud
+          </div>
+          <hr class="border-t-2 -mt-3">
+        </div>
+
+        <!-- Skill list -->
+        <div class="mt-6 text-sm">
+          <ul class="list-disc list-outside ml-4 mt-1">
+            <li>Elixir / Phoenix, Ruby / Rails,<br>Python / Django, C# / .NET</li>
+            <li>PostgreSQL, Elasticsearch</li>
+            <li>HTML, CSS, JavaScript / React, TypeScript, Dart / Angular</li>
+            <li>APIs, server-side web apps, SPAs</li>
+            <li>HTTP, REST, gRPC, SQS, RabbitMQ</li>
+            <li>JSON, XML, protobuf, MIME</li>
+            <li>Docker, AWS, Terraform, Linux</li>
+            <li>microservices, TDD, Agile</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right side -->
+      <div class="flex-grow p-6">
+        <div class="text-4xl text-center mt-6">
+          Stefan Chrobot
+        </div>
+        <div class="text-xl text-center uppercase font-thin">
+          Senior Software Engineer
+        </div>
+
+        <div class="mt-8 text-sm">
+          <!-- Work Experience -->
+          <div>
+            <div class="text-center font-thin uppercase mt-8">
+              <div class="bg-white inline px-4 text-black">
+                Work Experience
+              </div>
+              <hr class="border-t-2 -mt-3">
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-row items-center">
+                <img src="img/xkit-logo.png" class="mr-4 object-scale-down w-6">
+                <div class="flex-grow flex flex-row justify-between">
+                  <div class="font-bold">
+                    Xkit
+                  </div>
+                  <div class="font-thin">
+                    Nov 2020 - present
+                  </div>
+                </div>
+              </div>
+              <ul class="list-disc list-outside ml-14 mt-1">
+                <li>Built a multi-tenant two-way data sync platform</li>
+                <li>Built a unified framework for extending third-party systems</li>
+                <li>Handling OAuth and other authorization schemes</li>
+                <li>Contributed to building the team and the dev process</li>
+                <li>Went through 3 iterations of the product</li>
+                <li>First technical hire in a startup</li>
+                <li>Remote-first and async work</li>
+              </ul>
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-row items-center">
+                <img src="img/airhelp-logo.png" class="mr-4 object-scale-down w-6">
+                <div class="flex-grow flex flex-row justify-between">
+                  <div class="font-bold">
+                    AirHelp
+                  </div>
+                  <div class="font-thin">
+                    Apr 2018 - Jan 2021
+                  </div>
+                </div>
+              </div>
+              <ul class="list-disc list-outside ml-14 mt-1">
+                <li>Led an initiative to improve the workflow and tooling for a&nbsp;300+ people organization</li>
+                <li>Built backend systems that automate repetitive manual work and allow scaling the capacity of the organization</li>
+                <li>Replaced major components of a system without disrupting users' work</li>
+                <li>Helped setting up a happy and productive team</li>
+                <li>Led an effort for the adoption of Elixir</li>
+              </ul>
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-row items-center">
+                <img src="img/wfh-logo.png" class="mr-4 object-scale-down w-6">
+                <div class="flex-grow flex flex-row justify-between">
+                  <div class="font-bold">
+                    Freelancer/contractor
+                  </div>
+                  <div class="font-thin">
+                    Dec 2017 - Mar 2018
+                  </div>
+                </div>
+              </div>
+              <ul class="list-disc list-outside ml-14 mt-1">
+                <li>First full-time Elixir gig: an API for an SPA</li>
+                <li>Implementing new UI designs for an SSR web app</li>
+                <li>Remote-first job</li>
+              </ul>
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-row items-center">
+                <img src="img/google-logo.png" class="mr-4 object-scale-down w-6">
+                <div class="flex-grow flex flex-row justify-between">
+                  <div class="font-bold">
+                    Google (contractor via Hays)
+                  </div>
+                  <div class="font-thin">
+                    Jan 2017 - Nov 2017
+                  </div>
+                </div>
+              </div>
+              <ul class="list-disc list-outside ml-14 mt-1">
+                <li>Modernized an SPA with Python backend</li>
+                <li>Learned how to be productive at a sustainable pace</li>
+              </ul>
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-row items-center">
+                <img src="img/base-logo.png" class="mr-4 object-scale-down w-6">
+                <div class="flex-grow flex flex-row justify-between">
+                  <div class="font-bold">
+                    Base CRM
+                  </div>
+                  <div class="font-thin">
+                    Sep 2014 - Dec 2016
+                  </div>
+                </div>
+              </div>
+              <ul class="list-disc list-outside ml-14 mt-1">
+                <li>Built a multi-tenant integrations (CRM to Support, CRM to Marketing Automation)</li>
+                <li>Learned the value of ownership</li>
+              </ul>
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-row items-center">
+                <div class="mr-4 object-scale-down w-6"></div>
+                <div class="flex-grow flex flex-row justify-between">
+                  <div class="font-bold">
+                    ...and more.
+                  </div>
+                  <div class="font-thin">
+                    since Sep 2009
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--
+            <div class="mt-6">
+              <div class="flex flex-row items-center">
+                <img src="img/sabre-logo.png" class="mr-4 object-scale-down w-8">
+                <div class="flex-grow flex flex-row justify-between">
+                  <div class="font-bold">
+                    Sabre Holdings
+                  </div>
+                  <div class="font-thin">
+                    Mar 2010 - Aug 2014
+                  </div>
+                </div>
+              </div>
+              <ul class="list-disc list-outside ml-14 mt-1">
+                <li>Grew from a junior to a regular software engineer</li>
+                <li>Learned the principles of Agile and Scrum</li>
+                <li>Formed strong opinions about software methodologies</li>
+              </ul>
+            </div>
+            -->
+          </div>
+
+          <!-- Education -->
+          <div>
+            <div class="text-center font-thin uppercase mt-8">
+              <div class="bg-white inline px-4 text-black">
+                Education
+              </div>
+              <hr class="border-t-2 -mt-3">
+            </div>
+
+            <div class="mt-6">
+              <div class="flex flex-row items-center">
+                <img src="img/ju-logo.png" class="mr-4 object-scale-down w-6">
+                <div class="flex-grow flex flex-row justify-between">
+                  <div class="font-bold">
+                    Jagiellonian University
+                  </div>
+                  <div class="font-thin">
+                    Oct 2004 - Jun 2009
+                  </div>
+                </div>
+              </div>
+              <ul class="list-disc list-outside ml-14 mt-1">
+                <li>MSc in Computer Science</li>
+                <li>Programming languages, software design, formal languages, compilers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
